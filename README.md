@@ -246,3 +246,7 @@ describe("Math functions:", () => {
 ```
 
 </details>
+
+<br />
+
+<img src="https://github.com/DevMountain/unit-testing-mini/blob/solution/readme-assets/2g.gif" />
