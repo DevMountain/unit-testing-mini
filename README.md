@@ -172,6 +172,8 @@ In this step, we'll go over how to group unit tests. This helps keep tests organ
   * Call this group `Math functions`.
 * Run `npm test`.
 
+### Solution 
+
 <details>
 
 <summary> <code> functions.js </code> </summary>
