@@ -24,7 +24,7 @@ In this step, we'll initialize a `package.json` and import Jest into our project
 
 <summary> <code> package.json </code> </summary>
 
-```json
+```js
 {
   "name": "unit-testing-mini",
   "version": "1.0.0",
