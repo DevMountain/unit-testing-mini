@@ -2,7 +2,7 @@
 
 # Project Summary
 
-In this project, we'll learn how to unit test JavaScript files by using Jest. Jest is a unit testing framework that was developed by Facebook.
+In this project, we'll learn how to unit test JavaScript files by using Jest. Jest is a unit testing framework that was developed by Facebook. One of the cool features about this testing framework is that it doesn't require any configuration to get up and going and it will also automagically find `test` files that are named `.test.js` or located in a `__tests__` folder.
 
 ## Step 1
 
@@ -95,5 +95,58 @@ module.exports = {
 
 </details>
 
+## Step 3
 
+### Summary
 
+In this step, we'll create a test file to test the functions inside of `functions.js`.
+
+### Instructions
+
+* Create a new test file called `functions.test.js`.
+* Open `functions.test.js`.
+* Require `functions.js` at the top.
+* Create a test for `returnTwo`:
+  * This test should `expect` `returnTwo()` to equal `2`.
+* Create a test for `greeting`:
+  * This test should `expect` `greeting('James')` to equal `"Hello, James."`.
+  * This test should `expect` `greeting('Jill')` to equal `"Hello, Jill."`.
+* Create a test for `add`:
+  * This test should `expect` `add(1, 2)` to equal `3`.
+  * This test should `expect` `add(5, 9)` to equal `14`.
+
+<details>
+
+<summary> <code> functions.test.js </code> </summary>
+
+```js
+const functions = require('./functions');
+
+test("returnTwo() should return 2.", () => {
+  expect( functions.returnTwo() ).toEqual( 2 );
+});
+
+test("greeting() should return a dynamic greeting based on name.", () => {
+  expect( functions.greeting('James') ).toEqual('Hello, James.');
+  expect( functions.greeting('Jill') ).toEqual('Hello, Jill.');
+});
+
+test("add() should return a dynamic sum based on two number parameters.", () => {
+  expect( functions.add( 1, 2 ) ).toEqual( 3 );
+  expect( functions.add( 5, 9 ) ).toEqual( 14 );
+});
+```
+
+</details>
+
+## Step 4
+
+### Summary
+
+In this step, we'll run our `test` script and watch Jest in action.
+
+### Instruction
+
+* Run `npm test`.
+
+### Solution
