@@ -150,3 +150,5 @@ In this step, we'll run our `test` script and watch Jest in action.
 * Run `npm test`.
 
 ### Solution
+
+<img src="https://github.com/DevMountain/unit-testing-mini/blob/solution/readme-assets/1g.gif" />
