@@ -152,3 +152,97 @@ In this step, we'll run our `test` script and watch Jest in action.
 ### Solution
 
 <img src="https://github.com/DevMountain/unit-testing-mini/blob/solution/readme-assets/1g.gif" />
+
+## Step 5
+
+### Summary
+
+In this step, we'll go over how to group unit tests. This helps keep tests organized. 
+
+### Instructions
+
+* Open `functions.js`.
+* Add a new function for `multiply`, `divide`, and `subtract`:
+  * All these functions should follow the same structure as the `add` function.
+* Open `functions.test.js`.
+* Add a new test case for `multiply`, `divide`, and `subtract`:
+  * All these tests should follow the same structure as the `add` test case.
+  * Use whatever numbers you like, but include two `expect`s.
+* Group the `add`, `multiply`, `divide`, and `subtract` test cases using `describe`.
+  * Call this group `Math functions`.
+* Run `npm test`.
+
+<details>
+
+<summary> <code> functions.js </code> </summary>
+
+```js
+module.exports = {
+  returnTwo: function() {
+    return 2;
+  },
+  
+  greeting: function( name ) {
+    return `Hello, ${ name }.`;
+  },
+
+  add: function( num1, num2 ) {
+    return num1 + num2;
+  },
+
+  multiply: function( num1, num2 ) {
+    return num1 * num2;
+  },
+
+  divide: function( num1, num2 ) {
+    return num1 / num2;
+  },
+
+  subtract: function( num1, num2 ) {
+    return num1 - num2;
+  }
+};
+```
+
+</details>
+
+<details>
+
+<summary> <code> functions.test.js </code> </summary>
+
+```js
+const functions = require('./functions');
+
+test("returnTwo() should return 2.", () => {
+  expect( functions.returnTwo() ).toEqual( 2 );
+});
+
+test("greeting() should return a dynamic greeting based on name.", () => {
+  expect( functions.greeting('James') ).toEqual('Hello, James.');
+  expect( functions.greeting('Jill') ).toEqual('Hello, Jill.');
+});
+
+describe("Math functions:", () => {
+  test("add() should return a dynamic sum based on two number parameters.", () => {
+    expect( functions.add( 1, 2 ) ).toEqual( 3 );
+    expect( functions.add( 5, 9 ) ).toEqual( 14 );
+  });
+
+  test("multiply() should return a dynamic product based on two number parameters.", () => {
+    expect( functions.multiply( 1, 2 ) ).toEqual( 2 );
+    expect( functions.multiply( 5, 9 ) ).toEqual( 45 );
+  });
+
+  test("divide() should return a dynamic quotient based on two number parameters.", () => {
+    expect( functions.divide( 2, 1 ) ).toEqual( 2 );
+    expect( functions.divide( 9, 3 ) ).toEqual( 3 );
+  });
+
+  test("subtract() should return a dynamic difference based on two number parameters.", () => {
+    expect( functions.subtract( 2, 1 ) ).toEqual( 1 );
+    expect( functions.subtract( 9, 3 ) ).toEqual( 6 );
+  });
+});
+```
+
+</details>
