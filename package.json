@@ -1,0 +1,23 @@
+{
+  "name": "unit-testing-mini",
+  "version": "1.0.0",
+  "description": "<img src=\"https://devmounta.in/img/logowhiteblue.png\" width=\"250\" align=\"right\">",
+  "main": "functions.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevMountain/unit-testing-mini.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevMountain/unit-testing-mini/issues"
+  },
+  "homepage": "https://github.com/DevMountain/unit-testing-mini#readme",
+  "devDependencies": {
+    "jest": "^21.1.0"
+  }
+}

@@ -15,6 +15,8 @@ In this step, we'll initialize a `package.json` and import Jest into our project
 * Run `npm init -y`.
   * This creates a `package.json` with all the default values.
 * Run `npm install --save-dev jest` to install Jest and save it to the development dependencies. 
+* Open `package.json` and modify the `test` script:
+  * In the string, replace everything with just `"jest"`.
 
 ### Solution
 
@@ -22,8 +24,30 @@ In this step, we'll initialize a `package.json` and import Jest into our project
 
 <summary> <code> package.json </code> </summary>
 
-```
-
+```json
+{
+  "name": "unit-testing-mini",
+  "version": "1.0.0",
+  "description": "<img src=\"https://devmounta.in/img/logowhiteblue.png\" width=\"250\" align=\"right\">",
+  "main": "functions.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevMountain/unit-testing-mini.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevMountain/unit-testing-mini/issues"
+  },
+  "homepage": "https://github.com/DevMountain/unit-testing-mini#readme",
+  "devDependencies": {
+    "jest": "^21.1.0"
+  }
+}
 ```
 
 </details>
