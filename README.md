@@ -1,5 +1,3 @@
-# unit-testing-mini
-Unit Testing - Day 1 - Jest
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
 # Project Summary
